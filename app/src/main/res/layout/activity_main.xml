@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spx.MainActivity">
+
+    <TextView
+        android:id="@+id/surface_activity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@color/button_color"
+        android:text="纯SurfaceView Activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        android:onClick="startSurfaceViewActivity"/>
+
+    <TextView
+        android:id="@+id/touchable_surface_activity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        android:onClick="startGameSurfaceViewActivity"
+        android:padding="12dp"
+        android:text="响应触摸事件的SurfaceView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surface_activity_tv"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/glSurface_activity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        android:onClick="startGLSurfaceViewActivity"
+        android:padding="12dp"
+        android:text="glSurfaceView测试"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/touchable_surface_activity_tv"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/glSurface_gesture_activity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        android:onClick="startGLSurfaceViewGestureActivity"
+        android:padding="12dp"
+        android:text="glSurfaceView测试"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glSurface_activity_tv"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/camera_activity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        android:onClick="startCameraActivity"
+        android:padding="12dp"
+        android:text="SurfaceTexture Camera测试"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glSurface_gesture_activity_tv"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/recoder_activity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        android:onClick="startCameraRecorderActivity"
+        android:padding="12dp"
+        android:text="Camera录像测试"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_activity_tv"
+        android:layout_marginTop="16dp" />
+
+
+</android.support.constraint.ConstraintLayout>
