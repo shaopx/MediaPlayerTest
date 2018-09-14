@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/MediaPlayerTest.iml" filepath="$PROJECT_DIR$/MediaPlayerTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/opengl_egl_impl/opengl_egl_impl.iml" filepath="$PROJECT_DIR$/opengl_egl_impl/opengl_egl_impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/opengl_egl_impl_2/opengl_egl_impl_2.iml" filepath="$PROJECT_DIR$/opengl_egl_impl_2/opengl_egl_impl_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/opengl_glsurfaceview_impl/opengl_glsurfaceview_impl.iml" filepath="$PROJECT_DIR$/opengl_glsurfaceview_impl/opengl_glsurfaceview_impl.iml" />
     </modules>
   </component>

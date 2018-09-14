@@ -14,6 +14,7 @@ import com.spx.mediaplayertest.R;
 import com.spx.surfaceview.SurfaceViewActivity;
 
 import sandy.android.com.opengl_egl_impl.EglImpl1Activity;
+import sandy.android.com.opengl_egl_impl_2.EglImp2Activity;
 import sandy.android.com.opengl_glsurfaceview_impl.OpenGlWithGlSurfaceViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -71,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void startEGLImpl1Activity(View view) {
         Intent intent = new Intent(this, EglImpl1Activity.class);
+        startActivity(intent);
+    }
+
+    public void startEGLImpl2Activity(View view) {
+        Intent intent = new Intent(this, EglImp2Activity.class);
         startActivity(intent);
     }
 }

@@ -111,5 +111,18 @@
         app:layout_constraintTop_toBottomOf="@+id/opengl_glsurfaceview_tv"
         android:layout_marginTop="@dimen/margintop" />
 
+    <TextView
+        android:id="@+id/egl_impl2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        android:onClick="startEGLImpl2Activity"
+        android:padding="12dp"
+        android:text="使用egl + opengl实现2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/egl_impl1_tv"
+        android:layout_marginTop="@dimen/margintop" />
+
 
 </android.support.constraint.ConstraintLayout>
