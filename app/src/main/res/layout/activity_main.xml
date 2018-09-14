@@ -17,7 +17,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_bias="0.05"
         android:onClick="startSurfaceViewActivity"/>
 
     <TextView
@@ -31,7 +31,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/surface_activity_tv"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="@dimen/margintop" />
 
     <TextView
         android:id="@+id/glSurface_activity_tv"
@@ -44,7 +44,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/touchable_surface_activity_tv"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="@dimen/margintop" />
 
     <TextView
         android:id="@+id/glSurface_gesture_activity_tv"
@@ -57,7 +57,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/glSurface_activity_tv"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="@dimen/margintop" />
 
     <TextView
         android:id="@+id/camera_activity_tv"
@@ -66,11 +66,11 @@
         android:background="@color/button_color"
         android:onClick="startCameraActivity"
         android:padding="12dp"
-        android:text="SurfaceTexture Camera测试"
+        android:text="使用ImageReader摄像头拍照"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/glSurface_gesture_activity_tv"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="@dimen/margintop" />
 
     <TextView
         android:id="@+id/recoder_activity_tv"
@@ -79,11 +79,37 @@
         android:background="@color/button_color"
         android:onClick="startCameraRecorderActivity"
         android:padding="12dp"
-        android:text="Camera录像测试"
+        android:text="使用MediaRecorder录像测试"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/camera_activity_tv"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="@dimen/margintop" />
+
+    <TextView
+        android:id="@+id/opengl_glsurfaceview_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        android:onClick="startGLSurfaceViewOpenglActivity"
+        android:padding="12dp"
+        android:text="使用glSurfaceView + opengl实现"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recoder_activity_tv"
+        android:layout_marginTop="@dimen/margintop" />
+
+    <TextView
+        android:id="@+id/egl_impl1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        android:onClick="startEGLImpl1Activity"
+        android:padding="12dp"
+        android:text="使用egl + opengl实现1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opengl_glsurfaceview_tv"
+        android:layout_marginTop="@dimen/margintop" />
 
 
 </android.support.constraint.ConstraintLayout>

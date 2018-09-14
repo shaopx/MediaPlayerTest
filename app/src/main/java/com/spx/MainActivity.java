@@ -13,6 +13,9 @@ import com.spx.glsurfaceview.GLSurfaceViewTestActivity;
 import com.spx.mediaplayertest.R;
 import com.spx.surfaceview.SurfaceViewActivity;
 
+import sandy.android.com.opengl_egl_impl.EglImpl1Activity;
+import sandy.android.com.opengl_glsurfaceview_impl.OpenGlWithGlSurfaceViewActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -58,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
     public void startCameraRecorderActivity(View view) {
         Log.d(TAG, "startCameraRecorderActivity: ...");
         Intent intent = new Intent(this, VideoRecorderActivity.class);
+        startActivity(intent);
+    }
+
+    public void startGLSurfaceViewOpenglActivity(View view) {
+        Intent intent = new Intent(this, OpenGlWithGlSurfaceViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void startEGLImpl1Activity(View view) {
+        Intent intent = new Intent(this, EglImpl1Activity.class);
         startActivity(intent);
     }
 }

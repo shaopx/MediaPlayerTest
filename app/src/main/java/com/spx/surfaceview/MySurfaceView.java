@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import java.util.Random;
+
 public class MySurfaceView extends SurfaceView implements
         SurfaceHolder.Callback {
 
@@ -41,7 +43,8 @@ public class MySurfaceView extends SurfaceView implements
 
                 // 创建一个Rect对象rect
                 // public Rect (int left, int top, int right, int bottom)
-                Rect rect = new Rect(100, 50, 400, 350);
+                Rect rect = new Rect(100, 50, 100+(new Random().nextInt(400)),
+                        50+(new Random().nextInt(400)));
                 // 在canvas上绘制rect
                 canvas.drawRect(rect, p);
                 // 在canvas上显示时间

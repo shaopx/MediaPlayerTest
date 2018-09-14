@@ -30,6 +30,8 @@
         <activity android:name="com.spx.glsurfaceview.CubeFlingActivity" />
         <activity android:name="com.spx.camera.CameraActivity" />
         <activity android:name="com.spx.camera.recorder.VideoRecorderActivity"></activity>
+        <activity android:name="sandy.android.com.opengl_glsurfaceview_impl.OpenGlWithGlSurfaceViewActivity"></activity>
+        <activity android:name="sandy.android.com.opengl_egl_impl.EglImpl1Activity"></activity>
     </application>
 
 </manifest>
