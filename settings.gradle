@@ -1,1 +1,1 @@
-include ':app', ':opengl_glsurfaceview_impl', ':opengl_egl_impl', ':opengl_egl_impl_2'
+include ':app', ':opengl_glsurfaceview_impl', ':opengl_egl_impl', ':opengl_egl_impl_2', ':opengl_core'

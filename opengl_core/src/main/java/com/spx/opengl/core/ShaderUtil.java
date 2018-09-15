@@ -1,4 +1,4 @@
-package sandy.android.com.opengl_egl_impl_2;
+package com.spx.opengl.core;
 
 
 import android.content.res.Resources;
@@ -7,19 +7,63 @@ import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.FloatBuffer;
 
 /**
  * 加载顶点Shader与片元Shader的工具类
  */
 
 public class ShaderUtil {
+
+    // 顶点着色器的脚本
+    public static final String verticesShader
+            = "attribute vec2 vPosition;            \n" // 顶点位置属性vPosition
+            + "void main(){                         \n"
+            + "   gl_Position = vec4(vPosition,0,1);\n" // 确定顶点位置
+            + "}";
+
+    // 片元着色器的脚本
+    public static final String fragmentShader
+            = "precision mediump float;         \n" // 声明float类型的精度为中等(精度越高越耗资源)
+            + "uniform vec4 uColor;             \n" // uniform的属性uColor
+            + "void main(){                     \n"
+            + "   gl_FragColor = uColor;        \n" // 给此片元的填充色
+            + "}";
+
+    /**
+     * 获取图形的顶点
+     * 特别提示：由于不同平台字节顺序不同数据单元不是字节的一定要经过ByteBuffer
+     * 转换，关键是要通过ByteOrder设置nativeOrder()，否则有可能会出问题
+     *
+     * @return 顶点Buffer
+     */
+    public static FloatBuffer getVertices() {
+        float vertices[] = {
+                0.0f,   0.5f,
+                -0.5f, -0.5f,
+                0.5f,  -0.5f,
+        };
+
+        // 创建顶点坐标数据缓冲
+        // vertices.length*4是因为一个float占四个字节
+        ByteBuffer vbb = ByteBuffer.allocateDirect(vertices.length * 4);
+        vbb.order(ByteOrder.nativeOrder());             //设置字节顺序
+        FloatBuffer vertexBuf = vbb.asFloatBuffer();    //转换为Float型缓冲
+        vertexBuf.put(vertices);                        //向缓冲区中放入顶点坐标数据
+        vertexBuf.position(0);                          //设置缓冲区起始位置
+
+        return vertexBuf;
+    }
+
     /**
      * 加载制定shader的方法
      * @param shaderType shader的类型  GLES20.GL_VERTEX_SHADER   GLES20.GL_FRAGMENT_SHADER
      * @param source shader的脚本字符串
      * @return 着色器id
      */
-    private static int loadShader(int shaderType,String source) {
+    public static int loadShader(int shaderType,String source) {
         // 创建一个新shader
         int shader = GLES20.glCreateShader(shaderType);
         // 若创建成功则加载shader
@@ -41,6 +85,8 @@ public class ShaderUtil {
         }
         return shader;
     }
+
+
 
     /**
      * 创建shader程序的方法
