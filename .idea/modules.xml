@@ -2,12 +2,27 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MediaPlayerTest.iml" filepath="$PROJECT_DIR$/MediaPlayerTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/opengl_core/opengl_core.iml" filepath="$PROJECT_DIR$/opengl_core/opengl_core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/opengl_egl_impl/opengl_egl_impl.iml" filepath="$PROJECT_DIR$/opengl_egl_impl/opengl_egl_impl.iml" />
-      <module fileurl="file://$PROJECT_DIR$/opengl_egl_impl_2/opengl_egl_impl_2.iml" filepath="$PROJECT_DIR$/opengl_egl_impl_2/opengl_egl_impl_2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/opengl_glsurfaceview_impl/opengl_glsurfaceview_impl.iml" filepath="$PROJECT_DIR$/opengl_glsurfaceview_impl/opengl_glsurfaceview_impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MediaPlayerTest.iml" filepath="$PROJECT_DIR$/.idea/modules/MediaPlayerTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MediaPlayerTest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MediaPlayerTest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MediaPlayerTest.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MediaPlayerTest.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MediaPlayerTest.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MediaPlayerTest.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MediaPlayerTest.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MediaPlayerTest.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_core/MediaPlayerTest.opengl_core.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_core/MediaPlayerTest.opengl_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_core/MediaPlayerTest.opengl_core.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_core/MediaPlayerTest.opengl_core.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_core/MediaPlayerTest.opengl_core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_core/MediaPlayerTest.opengl_core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_core/MediaPlayerTest.opengl_core.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_core/MediaPlayerTest.opengl_core.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_egl_impl/MediaPlayerTest.opengl_egl_impl.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_egl_impl/MediaPlayerTest.opengl_egl_impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_egl_impl/MediaPlayerTest.opengl_egl_impl.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_egl_impl/MediaPlayerTest.opengl_egl_impl.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_egl_impl/MediaPlayerTest.opengl_egl_impl.main.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_egl_impl/MediaPlayerTest.opengl_egl_impl.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_egl_impl/MediaPlayerTest.opengl_egl_impl.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_egl_impl/MediaPlayerTest.opengl_egl_impl.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_egl_impl_2/MediaPlayerTest.opengl_egl_impl_2.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_egl_impl_2/MediaPlayerTest.opengl_egl_impl_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_egl_impl_2/MediaPlayerTest.opengl_egl_impl_2.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_egl_impl_2/MediaPlayerTest.opengl_egl_impl_2.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_egl_impl_2/MediaPlayerTest.opengl_egl_impl_2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_egl_impl_2/MediaPlayerTest.opengl_egl_impl_2.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_egl_impl_2/MediaPlayerTest.opengl_egl_impl_2.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_egl_impl_2/MediaPlayerTest.opengl_egl_impl_2.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_glsurfaceview_impl/MediaPlayerTest.opengl_glsurfaceview_impl.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_glsurfaceview_impl/MediaPlayerTest.opengl_glsurfaceview_impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_glsurfaceview_impl/MediaPlayerTest.opengl_glsurfaceview_impl.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_glsurfaceview_impl/MediaPlayerTest.opengl_glsurfaceview_impl.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_glsurfaceview_impl/MediaPlayerTest.opengl_glsurfaceview_impl.main.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_glsurfaceview_impl/MediaPlayerTest.opengl_glsurfaceview_impl.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/opengl_glsurfaceview_impl/MediaPlayerTest.opengl_glsurfaceview_impl.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/opengl_glsurfaceview_impl/MediaPlayerTest.opengl_glsurfaceview_impl.unitTest.iml" />
     </modules>
   </component>
 </project>

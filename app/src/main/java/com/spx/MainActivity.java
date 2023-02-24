@@ -1,10 +1,11 @@
 package com.spx;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.spx.camera.CameraActivity;
 import com.spx.camera.recorder.VideoRecorderActivity;

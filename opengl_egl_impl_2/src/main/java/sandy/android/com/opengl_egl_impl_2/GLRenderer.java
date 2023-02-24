@@ -7,7 +7,6 @@ import android.opengl.EGLContext;
 import android.opengl.EGLDisplay;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
-import android.support.annotation.NonNull;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -15,6 +14,8 @@ import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 
 import static android.opengl.EGL14.EGL_NO_SURFACE;
+
+import androidx.annotation.NonNull;
 
 /**
  *

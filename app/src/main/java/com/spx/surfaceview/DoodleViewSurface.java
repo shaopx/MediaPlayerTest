@@ -9,7 +9,6 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Path;
 import android.graphics.Rect;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -18,6 +17,8 @@ import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+
 import com.spx.mediaplayertest.R;
 
 /**
@@ -25,7 +26,6 @@ import com.spx.mediaplayertest.R;
  * 一个涂鸦的画板
  */
 public class DoodleViewSurface extends SurfaceView implements Callback, Runnable {
-
 
     private static final String TAG = "DoodleViewSurface";
 
@@ -189,10 +189,7 @@ public class DoodleViewSurface extends SurfaceView implements Callback, Runnable
 
             case MotionEvent.ACTION_UP:
                 //手抬起时触发
-
                 break;
-
-
             default:
                 break;
         }
@@ -283,7 +280,7 @@ public class DoodleViewSurface extends SurfaceView implements Callback, Runnable
             /** 计算出游戏一次更新的毫秒数 **/
             int diffTime = (int) (endTime - startTime);
 
-            /** 确保每次更新时间为50帧 **/
+            /** 确保每次更新时间为50ms **/
             while (diffTime <= TIME_IN_FRAME) {
                 diffTime = (int) (System.currentTimeMillis() - startTime);
                 /** 线程等待 **/

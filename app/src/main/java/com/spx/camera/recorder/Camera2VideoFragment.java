@@ -1,6 +1,8 @@
 package com.spx.camera.recorder;
 
 
+import static androidx.core.content.PermissionChecker.PERMISSION_DENIED;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -26,9 +28,6 @@ import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.NonNull;
-import android.support.v13.app.FragmentCompat;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
@@ -39,6 +38,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 
 import com.spx.camera.AutoFitTextureView;
 import com.spx.mediaplayertest.R;
@@ -53,7 +56,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 public class Camera2VideoFragment extends Fragment
-        implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
+        implements View.OnClickListener {
 
     private static final int SENSOR_ORIENTATION_DEFAULT_DEGREES = 90;
     private static final int SENSOR_ORIENTATION_INVERSE_DEGREES = 270;
@@ -347,7 +350,7 @@ public class Camera2VideoFragment extends Fragment
      */
     private boolean shouldShowRequestPermissionRationale(String[] permissions) {
         for (String permission : permissions) {
-            if (FragmentCompat.shouldShowRequestPermissionRationale(this, permission)) {
+            if (ContextCompat.checkSelfPermission(this.getContext(), permission)==PERMISSION_DENIED) {
                 return true;
             }
         }
@@ -361,9 +364,10 @@ public class Camera2VideoFragment extends Fragment
         if (shouldShowRequestPermissionRationale(VIDEO_PERMISSIONS)) {
             new ConfirmationDialog().show(getChildFragmentManager(), FRAGMENT_DIALOG);
         } else {
-            FragmentCompat.requestPermissions(this, VIDEO_PERMISSIONS, REQUEST_VIDEO_PERMISSIONS);
+            requestPermissions(VIDEO_PERMISSIONS, REQUEST_VIDEO_PERMISSIONS);
         }
     }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
@@ -389,7 +393,7 @@ public class Camera2VideoFragment extends Fragment
 
     private boolean hasPermissionsGranted(String[] permissions) {
         for (String permission : permissions) {
-            if (ActivityCompat.checkSelfPermission(getActivity(), permission)
+            if (ContextCompat.checkSelfPermission(getActivity(), permission)
                     != PackageManager.PERMISSION_GRANTED) {
                 return false;
             }
@@ -733,7 +737,7 @@ public class Camera2VideoFragment extends Fragment
                     .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            FragmentCompat.requestPermissions(parent, VIDEO_PERMISSIONS,
+                            requestPermissions(VIDEO_PERMISSIONS,
                                     REQUEST_VIDEO_PERMISSIONS);
                         }
                     })
